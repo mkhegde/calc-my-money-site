@@ -16,6 +16,7 @@
   "react-hook-form": "^7.51.3",
   "lucide-react": "^0.454.0",
   "recharts": "^2.10.4"
+  "@next/mdx": "14.2.5"
 },
   "devDependencies": {
     "autoprefixer": "10.4.19",
