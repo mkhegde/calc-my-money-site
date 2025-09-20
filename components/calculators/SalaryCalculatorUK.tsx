@@ -1,5 +1,7 @@
 // @ts-nocheck
 "use client";
+import NextLink from "next/link";
+const Link = ({ to, href, ...props }: any) => <NextLink href={href ?? to ?? "#"} {...props} />;
 import { gbp, pct } from "@/lib/format";
 import React, { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -18,9 +20,6 @@ import CalculatorWrapper from "./CalculatorWrapper"; // New component for conten
 import RelatedCalculators from "./RelatedCalculators"; // New component for internal linking
 import Breadcrumbs from "./Breadcrumbs";
 import { createPageUrl } from "@/utils";
-import NextLink from "next/link";
-const Link = ({ to, href, ...props }: any) => <NextLink href={href ?? to ?? "#"} {...props} />;
-
 // Adding structured data for better rich snippets
 const salaryCalculatorJsonLd = {
   "@context": "https://schema.org",
