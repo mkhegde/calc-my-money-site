@@ -11,12 +11,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { PoundSterling, Calculator, TrendingDown, TrendingUp, HelpCircle, ChevronsUpDown, Settings2 } from "lucide-react";
 import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, Legend, ResponsiveContainer } from 'recharts';
-import ExportActions from "../components/calculators/ExportActions";
-import FAQSection from "../components/calculators/FAQSection";
-import AnimatedNumber from "../components/general/AnimatedNumber";
-import CalculatorWrapper from "../components/calculators/CalculatorWrapper"; // New component for content
-import RelatedCalculators from "../components/calculators/RelatedCalculators"; // New component for internal linking
-import Breadcrumbs from "../components/general/Breadcrumbs";
+import ExportActions from "./ExportActions";
+import FAQSection from "./FAQSection";
+import AnimatedNumber from "./AnimatedNumber";
+import CalculatorWrapper from "./CalculatorWrapper"; // New component for content
+import RelatedCalculators from "./RelatedCalculators"; // New component for internal linking
+import Breadcrumbs from "./Breadcrumbs";
 import { createPageUrl } from "@/utils";
 import { Link } from "react-router-dom"; // Added Link import
 
