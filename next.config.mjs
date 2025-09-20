@@ -1,8 +1,15 @@
-/** @type {import('next').NextConfig} */
+// next.config.mjs
+import createMDX from "@next/mdx";
+
+/** Enable MDX (.mdx files) in the App Router */
+const withMDX = createMDX({
+  extension: /\.mdx?$/,
+});
+
 const nextConfig = {
   experimental: {
-    typedRoutes: false, // ← disable strict Link href typing
+    typedRoutes: false, // keep this disabled for simpler <Link> typing
   },
 };
 
-export default nextConfig;
+export default withMDX(nextConfig);
