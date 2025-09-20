@@ -1,1 +1,27 @@
-{"name":"calc-my-money-site","version":"0.1.0","private":true,"scripts":{"dev":"next dev","build":"next build","start":"next start","lint":"next lint"},"dependencies":{"next":"14.2.5","react":"18.2.0","react-dom":"18.2.0","@next/mdx":"14.2.5","@mdx-js/loader":"^3.0.1","@mdx-js/react":"^3.0.1","decimal.js":"^10.4.3","react-hook-form":"^7.51.3","lucide-react":"^0.454.0","recharts":"^2.10.4"},"devDependencies":{"tailwindcss":"^3.4.10","postcss":"^8.4.47","autoprefixer":"^10.4.20","typescript":"^5.6.2","@types/node":"^20.14.10","@types/react":"^18.2.46","@types/react-dom":"^18.2.18"}}
+{
+  "name": "calc-my-money-site",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": { "dev": "next dev", "build": "next build", "start": "next start", "lint": "next lint" },
+  "dependencies": {
+    "next": "14.2.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "@next/mdx": "14.2.5",
+    "@mdx-js/loader": "^2.3.0",
+    "@mdx-js/react": "^2.3.0",
+    "decimal.js": "^10.4.3",
+    "react-hook-form": "^7.51.3",
+    "lucide-react": "^0.454.0",
+    "recharts": "^2.10.4"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.10",
+    "postcss": "^8.4.47",
+    "autoprefixer": "^10.4.20",
+    "typescript": "^5.6.2",
+    "@types/node": "^20.14.10",
+    "@types/react": "^18.2.46",
+    "@types/react-dom": "^18.2.18"
+  }
+}
