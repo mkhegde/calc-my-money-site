@@ -1,2 +1,8 @@
-const nextConfig = { reactStrictMode: true, experimental: { typedRoutes: true }, output: 'standalone' };
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  experimental: {
+    typedRoutes: false, // ← disable strict Link href typing
+  },
+};
+
 export default nextConfig;
