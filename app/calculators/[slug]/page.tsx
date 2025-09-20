@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { calculators } from "@/data/calculators";
 import JsonLd from "@/components/JsonLd";
+import SalaryCalculatorUK from "../../../components/calculators/SalaryCalculatorUK";
 
 type Props = { params: { slug: string } };
 
@@ -34,10 +35,10 @@ export default function CalculatorPage({ params }: Props) {
         <h1 className="text-2xl md:text-3xl font-semibold">{calc.name}</h1>
         <p className="text-slate-300">{calc.description}</p>
       </header>
-      <section className="card">
-        <h2 className="text-xl mb-3">Interactive Widget (placeholder)</h2>
-        <p className="text-slate-400 text-sm">Plug your React calculator component here.</p>
-      </section>
+     <section className="card">
+  <h2 className="text-xl mb-3">Interactive Widget</h2>
+  <SalaryCalculatorUK />
+</section>
       <section className="card">
         <h3 className="text-lg mb-2">About this calculator</h3>
         <p className="text-slate-300">Add formulae, assumptions, FAQs here.</p>
