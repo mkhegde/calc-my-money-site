@@ -1,4 +1,4 @@
-import SalaryCalculatorUK from "../../../components/calculators/SalaryCalculatorUK";
+import SalaryWidget from "../../../components/calculators/SalaryWidget";
 
 export default function Page() {
   return (
@@ -6,7 +6,7 @@ export default function Page() {
       <h1 className="text-2xl md:text-3xl font-semibold">Salary Calculator</h1>
       <section className="card">
         <h2 className="text-xl mb-3">Interactive Widget</h2>
-        <SalaryCalculatorUK />
+        <SalaryWidget />
       </section>
     </main>
   );
