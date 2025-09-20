@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { calculators } from "@/data/calculators";
+import { calculators } from "../data/calculators";
 
 function getBase() {
   return (
@@ -15,9 +15,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const base = getBase();
   return [
     { url: base, priority: 1 },
-    ...calculators.map((c) => ({
-      url: `${base}/calculators/${c.slug}`,
-      priority: 0.8,
-    })),
+    ...calculators
+      .filter((c) => c.status === "live")
+      .map((c) => ({
+        url: `${base}/calculators/${c.slug}`,
+        priority: 0.8,
+      })),
   ];
 }
