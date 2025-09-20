@@ -1,0 +1,1 @@
+import type { MetadataRoute } from 'next'; import { calculators } from '@/data/calculators'; export default function sitemap(): MetadataRoute.Sitemap { const base='https://example.com'; return [{url:base,priority:1}, ...calculators.map(c=>({url:`${base}/calculators/${c.slug}`,priority:.8}))]; }
