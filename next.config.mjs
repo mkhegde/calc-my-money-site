@@ -1,14 +1,14 @@
 // next.config.mjs
 import createMDX from "@next/mdx";
 
-/** Enable MDX (.mdx files) in the App Router */
 const withMDX = createMDX({
   extension: /\.mdx?$/,
 });
 
 const nextConfig = {
+  pageExtensions: ["mdx", "tsx", "ts", "jsx", "js"], // ← add MDX to page extensions
   experimental: {
-    typedRoutes: false, // keep this disabled for simpler <Link> typing
+    typedRoutes: false,
   },
 };
 
