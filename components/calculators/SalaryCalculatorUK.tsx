@@ -18,7 +18,8 @@ import CalculatorWrapper from "./CalculatorWrapper"; // New component for conten
 import RelatedCalculators from "./RelatedCalculators"; // New component for internal linking
 import Breadcrumbs from "./Breadcrumbs";
 import { createPageUrl } from "@/utils";
-import { Link } from "react-router-dom"; // Added Link import
+import Link from "next/link";
+const Link = ({ to, href, ...props }: any) => <NextLink href={href ?? to ?? "#"} {...props} />;
 
 // Adding structured data for better rich snippets
 const salaryCalculatorJsonLd = {
