@@ -9,8 +9,8 @@ function getBase() {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const isProd = process.env.VERCEL_ENV === "production";
-  if (!isProd) return []; // no sitemap on preview builds
+  const allowIndexing = process.env.NEXT_PUBLIC_ALLOW_INDEXING === "true";
+  if (!allowIndexing) return []; // hide sitemap when indexing is disabled
 
   const base = getBase();
   return [
