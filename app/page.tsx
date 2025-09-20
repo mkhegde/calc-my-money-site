@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { calculators } from "@/data/calculators";
+import { calculators } from "../data/calculators";
 
 export default function HomePage() {
   return (
