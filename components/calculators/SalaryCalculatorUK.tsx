@@ -1,25 +1,28 @@
 // @ts-nocheck
 "use client";
-import NextLink from "next/link";
-const Link = ({ to, href, ...props }: any) => <NextLink href={href ?? to ?? "#"} {...props} />;
-import { gbp, pct } from "@/lib/format";
+
 import React, { useState, useEffect } from "react";
+import Decimal from "decimal.js";
+import { useForm } from "react-hook-form";
+
+import { gbp, pct } from "@/lib/format";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { PoundSterling, Calculator, TrendingDown, TrendingUp, HelpCircle, ChevronsUpDown, Settings2 } from "lucide-react";
-import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, Legend, ResponsiveContainer } from 'recharts';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
+
 import ExportActions from "./ExportActions";
 import FAQSection from "./FAQSection";
-import AnimatedNumber from "./AnimatedNumber";
-import CalculatorWrapper from "./CalculatorWrapper"; // New component for content
-import RelatedCalculators from "./RelatedCalculators"; // New component for internal linking
+import RelatedCalculators from "./RelatedCalculators";
 import Breadcrumbs from "./Breadcrumbs";
+
 import { createPageUrl } from "@/utils";
+
+// Wrap Next.js Link so existing <Link to="..."> keeps working
+import NextLink from "next/link";
+const Link = ({ to, href, ...props }: any) => <NextLink href={href ?? to ?? "#"} {...props} />;
+
 // Adding structured data for better rich snippets
 const salaryCalculatorJsonLd = {
   "@context": "https://schema.org",
